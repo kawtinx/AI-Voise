@@ -4,11 +4,13 @@ const axios = require('axios');
 require('dotenv').config();
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 app.use(cors());
 app.use(express.json());
 app.use(express.static('.'));
+
+const GROQ_API_KEY = process.env.GROQ_API_KEY;
 
 app.post('/api/chat', async (req, res) => {
     try {
@@ -29,7 +31,7 @@ app.post('/api/chat', async (req, res) => {
             { ...req.body, messages },
             {
                 headers: {
-                    'Authorization': 'Bearer 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',
+                    'Authorization': `Bearer ${GROQ_API_KEY}`,
                     'Content-Type': 'application/json'
                 }
             }
