@@ -44,7 +44,7 @@
 
 1. **استنساخ المشروع**
    ```bash
-   git clone https://github.com/your-username/oise_web_ai.git
+   git clone https://github.com/kawtinx/oise_web_ai.git
    cd oise_web_ai
    ```
 
