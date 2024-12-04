@@ -107,7 +107,7 @@
 
 إذا واجهت أي مشاكل أو لديك أسئلة:
 - افتح issue في GitHub
-- راسلنا على: your.email@example.com
+- راسلنا على: ahmedtiznit61@gmail.com
 
 ---
 
