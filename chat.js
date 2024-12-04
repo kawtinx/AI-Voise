@@ -27,7 +27,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 console.error('Axios not loaded!');
                 return;
             }
-            this.groqApiKey = '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';
             console.log('Groq client initialized');
         }
 
