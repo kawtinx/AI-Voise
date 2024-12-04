@@ -6,39 +6,10 @@
     <title>AI Orb</title>
     <link rel="icon" href="profile.jpg" type="image/png">
     <link rel="stylesheet" href="style.css">
-    
-    <!-- Three.js Core -->
-    <script async src="https://unpkg.com/es-module-shims@1.8.0/dist/es-module-shims.js"></script>
-    <script type="importmap">
-    {
-        "imports": {
-            "three": "https://unpkg.com/three@0.159.0/build/three.module.js",
-            "three/addons/": "https://unpkg.com/three@0.159.0/examples/jsm/"
-        }
-    }
-    </script>
-    <script type="module">
-        import * as THREE from 'three';
-        import { EffectComposer } from 'three/addons/postprocessing/EffectComposer.js';
-        import { RenderPass } from 'three/addons/postprocessing/RenderPass.js';
-        import { UnrealBloomPass } from 'three/addons/postprocessing/UnrealBloomPass.js';
-        
-        window.THREE = THREE;
-        window.EffectComposer = EffectComposer;
-        window.RenderPass = RenderPass;
-        window.UnrealBloomPass = UnrealBloomPass;
-    </script>
 </head>
 <body>
-    <div id="scene-container"></div>
-    <button id="startAudio" class="audio-button">تشغيل الموسيقى</button>
-    <input type="file" id="audioFile" accept="audio/*" style="display: none;">
-    <script src="main.js" type="module"></script>
-    <div class="ai-orb">
-        <div class="orb"></div>
-        <div class="wave-container">
-            <div class="wave"></div>
-        </div>
+    <div class="orb-container">
+        <img src="sphere.gif" alt="AI Sphere" class="orb">
     </div>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://unpkg.com/@groq/groq-sdk@latest/dist/umd/index.js"></script>
