@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لوحة تحكم المشرف - نظام الذكاء الاصطناعي</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body class="admin-page">
+    <div class="admin-container">
+        <!-- شاشة تسجيل الدخول -->
+        <div id="login-section" class="admin-section">
+            <h1>تسجيل دخول المشرف</h1>
+            <form id="admin-login-form" class="admin-form">
+                <div class="form-group">
+                    <label for="admin-code">كود المشرف:</label>
+                    <input type="password" id="admin-code" required>
+                </div>
+                <button type="submit" class="admin-btn">دخول</button>
+            </form>
+        </div>
+
+        <!-- لوحة التحكم -->
+        <div id="dashboard-section" class="admin-section hidden">
+            <header class="admin-header">
+                <div class="header-left">
+                    <a href="index.html" class="back-button">
+                        <i class="fas fa-arrow-right"></i>
+                        العودة للمحادثة
+                    </a>
+                    <h1>لوحة تحكم النظام الذكي</h1>
+                </div>
+                <button id="logout-btn" class="admin-btn">تسجيل خروج</button>
+            </header>
+
+            <div class="dashboard-grid">
+                <!-- حالة النظام -->
+                <div class="dashboard-card">
+                    <h2>حالة النظام</h2>
+                    <div id="system-status" class="status-indicator">
+                        <div class="status-light"></div>
+                        <span class="status-text">جاري التحميل...</span>
+                    </div>
+                </div>
+
+                <!-- إحصائيات النظام -->
+                <div class="dashboard-card">
+                    <h2>إحصائيات النظام</h2>
+                    <div id="system-stats">
+                        <p>عدد الطلبات: <span id="request-count">0</span></p>
+                        <p>عدد الأخطاء: <span id="error-count">0</span></p>
+                        <p>معدل النجاح: <span id="success-rate">0%</span></p>
+                    </div>
+                </div>
+
+                <!-- المحادثات الأخيرة -->
+                <div class="dashboard-card full-width">
+                    <h2>المحادثات الأخيرة</h2>
+                    <div id="recent-conversations" class="conversations-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>التوقيت</th>
+                                    <th>سؤال المستخدم</th>
+                                    <th>رد النظام</th>
+                                    <th>الحالة</th>
+                                </tr>
+                            </thead>
+                            <tbody id="conversations-body"></tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- سجل الأخطاء -->
+                <div class="dashboard-card full-width">
+                    <h2>سجل الأخطاء</h2>
+                    <div id="error-log" class="log-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>التوقيت</th>
+                                    <th>نوع الخطأ</th>
+                                    <th>الوصف</th>
+                                    <th>الحالة</th>
+                                </tr>
+                            </thead>
+                            <tbody id="error-log-body"></tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- سجل النظام -->
+                <div class="dashboard-card full-width">
+                    <h2>سجل النظام</h2>
+                    <div id="system-log" class="log-container">
+                        <div id="log-entries"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="admin.js"></script>
+</body>
+</html>
